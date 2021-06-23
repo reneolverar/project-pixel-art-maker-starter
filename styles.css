@@ -35,10 +35,6 @@ td {
     width: 20px;
 }
 
-td.selected {
-    background-color: red;
-}
-
 input[type=number] {
     width: 6em;
 }
