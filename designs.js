@@ -22,3 +22,12 @@ function makeGrid() {
     }
     return table;
     }
+
+// Paint grid
+document.getElementById('pixelCanvas').addEventListener('click', function(event) {
+    var td = event.target
+    if (td.tagName !== 'TD') {
+    return
+    }
+    td.className = 'selected'
+})
