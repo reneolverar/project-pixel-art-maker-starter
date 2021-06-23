@@ -1,9 +1,17 @@
 // Select color input
-// Select size input
 
 // When size is submitted by the user, call makeGrid()
+function addTable() {
+    document.getElementById('pixelCanvas').innerHTML = "";
+    var size = document.getElementById("sizePicker");
+    rows = size.elements[0].value
+    cells = size.elements[1].value
+    document.getElementById('pixelCanvas').appendChild(makeGrid());
+    return false;  // to stop submission
+}
 
-function makeGrid(rows, cells) {
+// Make grid using row and cell values
+function makeGrid() {
     table = document.createElement('table');
     for (var i = 0; i < rows; ++i) {
         var row = document.createElement('tr');
@@ -14,5 +22,3 @@ function makeGrid(rows, cells) {
     }
     return table;
     }
-
-document.getElementById('pixelCanvas').appendChild(makeGrid(50, 50));
